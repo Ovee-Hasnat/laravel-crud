@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
@@ -41,3 +42,7 @@ Route::post('/logout', [SessionController::class, 'destroy']);
 
 Route::get('/register', [RegisteredUserController::class, 'view']);
 Route::post('/register', [RegisteredUserController::class, 'store']);
+
+// Language Switch
+Route::get('lang/{lang}', [LanguageController::class, 'switchLang'])
+    ->name('lang.switch');

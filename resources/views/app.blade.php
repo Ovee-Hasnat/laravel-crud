@@ -1,5 +1,3 @@
 <x-layout>
-    <x-slot:heading>Home Page</x-slot>
-
-
+    <x-slot:heading>{{__('messages.welcome')}}</x-slot>
 </x-layout>
